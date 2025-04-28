@@ -1,27 +1,72 @@
-# ProjetTodoTsAngular
+# :pencil2: Projet ToDoList_Ts_Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+Réécriture de l’application **ToDoList_JS** (JavaScript natif) en **Angular**, **TypeScript** et **Tailwind CSS**, tout en conservant les fonctionnalités (CRUD, filtrage, persistance).
 
-## Development server
+Projet développé par [Christopher PEREZ](https://github.com/Chr1stopherPerez), durant ma formation à [SIMPLON](https://www.simplon.co/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Fonctionnalités
 
-## Code scaffolding
+- **Ajouter** une nouvelle tâche via le formulaire
+- **Supprimer** une tâche individuellement
+- **Marquer** une tâche comme terminée ou non
+- **Filtrer** l’affichage des tâches (Toutes / En cours / Terminées)
+- **Conserver** les tâches en `localStorage` entre deux sessions
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Utilisées
 
-## Build
+- **Angular** (CLI)
+- **TypeScript**
+- **Tailwind CSS**
+- **LocalStorage API**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Structure du Projet
 
-## Running unit tests
+```text
+Projet_Todo_Ts_Angular/
+├─ docs/
+│   └─
+├─ src/
+│   ├─ app/
+│   │   ├─ components/…
+│   │   ├─ models/…
+│   │   └─ services/…
+│   ├─ styles.css
+│   └─ main.ts
+├─ tailwind.config.js
+├─ angular.json
+├─ package.json
+└─ README.md
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
 
-## Running end-to-end tests
+## Lancer le Projet
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. **Cloner le projet**
+   Téléchargez le projet ou clonez le dépôt à partir de GitHub
+2. **Ouvrir le projet**
 
-## Further help
+```
+cd Projet_Todo_Ts_Angular
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+3. **Installer les dépendances**
+
+```
+npm install
+```
+
+4. **Lancer le serveur en développement**
+
+```
+ng serve --open
+```
+
+5. **Tester les fonctionnalités**
+   - Ajoutez une tâche via le formulaire
+   - Marquez-la comme terminée ou supprimez-la
+   - Expérimentez le filtrage des tâches via le sélecteur dédié
+
+## Captures d'Écran
+
+![Capture d'écran 1](Capture.png)
+![Capture d'écran 2](Capture2.png)

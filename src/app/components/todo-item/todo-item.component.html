@@ -1,0 +1,18 @@
+<div class="flex items-center justify-between">
+  <span
+    (click)="toggle.emit()"
+    [class.line-through]="todo.completed"
+    [class.opacity-50]="todo.completed"
+    class="cursor-pointer flex-1"
+  >
+    {{ todo.title }}
+  </span>
+  <button
+    (click)="remove.emit()"
+    class="ml-4 bg-red-500 text-white px-2 py-1 rounded"
+  >
+    Supprimer
+  </button>
+</div>
+
+<!-- Todo-Item.Component.html -->

@@ -1,0 +1,65 @@
+<h1 class="text-[2rem] font-semibold text-center mb-6 text-[rgb(76,78,175)]">
+  Todo List
+</h1>
+
+<form
+  (ngSubmit)="add()"
+  class="flex gap-4 w-full max-w-lg mx-auto mb-8 justify-center"
+>
+  <input
+    type="text"
+    [(ngModel)]="newTitle"
+    name="title"
+    placeholder="Ajouter une tâche…"
+    required
+    class="flex-1 px-4 py-3 text-base border-2 border-[rgb(220,220,220)] rounded-lg outline-none focus:border-[rgb(76,78,175)] transition"
+  />
+  <button
+    class="bg-[rgb(76,78,175)] text-white px-5 py-3 rounded-lg hover:bg-[rgb(60,62,140)] active:scale-95 transition"
+  >
+    Ajouter
+  </button>
+</form>
+
+<div class="my-4 text-center">
+  <label class="mr-2 text-base font-medium text-[rgb(76,78,175)]" for="filter"
+    >Filtrer :</label
+  >
+  <select
+    id="filter"
+    [(ngModel)]="filter"
+    name="filter"
+    (change)="onFilterChange(filter)"
+    class="px-2 py-1 text-base border-2 border-[rgb(220,220,220)] rounded-lg outline-none focus:border-[rgb(76,78,175)] transition"
+  >
+    <option value="all">Toutes</option>
+    <option value="active">En cours</option>
+    <option value="completed">Terminées</option>
+  </select>
+</div>
+
+<ul class="list-none w-full max-w-lg mx-auto space-y-4">
+  <li
+    *ngFor="let todo of todos; let i = index"
+    class="flex items-center justify-between bg-white p-4 border border-[rgb(220,220,220)] rounded-lg hover:shadow-md cursor-pointer transition"
+    [class.opacity-70]="todo.completed"
+    [class.line-through]="todo.completed"
+  >
+    <span
+      (click)="todoService.toggle(i); load()"
+      class="flex-1 cursor-pointer"
+      [class.line-through]="todo.completed"
+      [class.opacity-70]="todo.completed"
+    >
+      {{ todo.title }}
+    </span>
+    <button
+      (click)="todoService.remove(i); load()"
+      class="ml-4 bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 transition"
+    >
+      Supprimer
+    </button>
+  </li>
+</ul>
+
+<!-- Todo-List.Component.html -->

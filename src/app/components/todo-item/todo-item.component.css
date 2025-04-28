@@ -1,0 +1,16 @@
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+button {
+  margin-left: 1rem;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
